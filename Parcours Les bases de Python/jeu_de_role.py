@@ -19,7 +19,7 @@ MIN_POTION_HEALING = 15
 MAX_POTION_HEALING = 50
 
 MESSAGE = "Souhaitez-vous attaquer (1) ou utiliser une potion (2) ? "
-LINE_LENGTH = 58
+LINE_LENGTH = len(MESSAGE) + 1
 
 def welcome():
     """Displays a welcome message."""
