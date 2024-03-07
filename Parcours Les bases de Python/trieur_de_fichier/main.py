@@ -20,9 +20,9 @@ MUSIQUE = DATA / "Musique"
 VIDEOS = DATA / "Vidéos"
 IMAGES = DATA / "Images"
 DOCUMENTS = DATA / "Documents"
-AUTRES = DATA / "Autres"
+DIVERS = DATA / "Divers"
 
-STORAGE_FOLDERS = [MUSIQUE, VIDEOS, IMAGES, DOCUMENTS, AUTRES]
+STORAGE_FOLDERS = [MUSIQUE, VIDEOS, IMAGES, DOCUMENTS, DIVERS]
 EXTENSIONS = {
     (".mp3", ".flac", ".wav"): MUSIQUE,
     (".avi", ".mp4", ".gif"): VIDEOS,
@@ -45,4 +45,4 @@ for fichier in fichiers:
                 fichier.rename(dossier / fichier.name)
                 break
         else:
-            fichier.rename(AUTRES / fichier.name)
+            fichier.rename(DIVERS / fichier.name)
