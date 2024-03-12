@@ -1,8 +1,9 @@
-"""Functions used in main.py"""
+"""Constants and functions used in main.py"""
 
 import json
 from collections import OrderedDict
 from pathlib import Path
+
 import liste
 
 # Menu options:
