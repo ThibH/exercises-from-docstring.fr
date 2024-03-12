@@ -1,7 +1,7 @@
 """
 LISTE DE COURSES VERSION ORIENTÉ OBJET
 -> Exercise from the course "Les bases de python" on the Docstring website (www.docstring.fr)
-A program to manage a shopping list using OOP.
+A program to manage a to-do list using OOP.
 Date: 2024-03-11
 Author: Simon Salvaing
 """
@@ -9,7 +9,6 @@ Author: Simon Salvaing
 import functions as f
 
 options = list(f.OPTIONS.keys())
-print(options.index("INDEX"))
 
 def main():
     choice = ""
