@@ -6,34 +6,25 @@ Date: 2024-03-11
 Author: Simon Salvaing
 """
 
-import functions as f
+from functions import display_menu, OPTIONS
 
-options = list(f.OPTIONS.keys())
 
 def main():
-    choice = ""
-    while choice != str(options.index("QUIT") + 1):
-        choice = f.display_menu()
-        if choice == str(options.index("INDEX") + 1):
-            f.lists_index_consulting()
-        elif choice == str(options.index("CONTENT") + 1):
-            f.list_content_consulting()
-        elif choice == str(options.index("CREATE") + 1):
-            f.creates_list()
-        elif choice == str(options.index("ADD") + 1):
-            f.add_to_list()
-        elif choice == str(options.index("REMOVE") + 1):
-            f.remove_from_list()
-        elif choice == str(options.index("CLEAR") + 1):
-            f.clear_list()
-        elif choice == str(options.index("DELETE") + 1):
-            f.delete_list()
-        elif choice == str(options.index("QUIT") + 1):
-            f.quit_programm()
-        else:
+    choice = -1
+    while choice != 8:
+
+        try:
+            choice = int(display_menu())
+        except ValueError:
             print("Choix invalide.")
+            continue
+
+        OPTIONS[choice]["function"]()
+
         print()
         print("-" * 50)
         print()
 
-main()
+
+if __name__ == '__main__':
+    main()
